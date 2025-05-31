@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import "stream-chat-react/dist/css/v2/index.css";
+import 'stream-chat-react/dist/css/v2/index.css';
 import "./App.css";
 
 import HomePage from "./pages/HomePage.jsx";
@@ -31,7 +31,7 @@ function App() {
           element={
             isAuthenticated && isOnboarded ? (
               <Layout showSidebar={true}>
-                <HomePage />
+              <HomePage />
               </Layout>
             ) : (
               <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
@@ -58,11 +58,11 @@ function App() {
             )
           }
         />
-        <Route
+       <Route
           path="/onboarding"
           element={authUser ? <OnboardingPage /> : <Navigate to="/" />}
         />
-        <Route
+         <Route
           path="/call/:id"
           element={
             isAuthenticated && isOnboarded ? (
@@ -84,11 +84,11 @@ function App() {
             )
           }
         />
-        <Route
+         <Route
           path="/chat/:id"
           element={
             isAuthenticated && isOnboarded ? (
-              <Layout>
+              <Layout >
                 <ChatPage />
               </Layout>
             ) : (
